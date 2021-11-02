@@ -1,12 +1,11 @@
 img = "";
 objects = [];
 status = "";
-alert_sound = "";
 
 function preload(){
   img = loadImage('dog_cat.jpg');
-  alert_sound = loadSound("alert_alert.mp3")
 }
+
 
 function setup() {
   canvas = createCanvas(380, 380);
@@ -42,7 +41,7 @@ function draw() {
         for (i = 0; i < objects.length; i++) {
           document.getElementById("status").innerHTML = "Status : Object Detected";
           document.getElementById("number_of_objects").innerHTML = "Baby Found";
-          alert_sound.play();
+ 
           fill(r,g,b);
           percent = floor(objects[i].confidence * 100);
           text(objects[i].label + " " + percent + "%", objects[i].x + 15, objects[i].y + 15);
