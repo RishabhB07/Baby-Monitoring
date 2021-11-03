@@ -40,7 +40,7 @@ function draw() {
         objectDetector.detect(video, gotResult);
         for (i = 0; i < objects.length; i++) {
           document.getElementById("status").innerHTML = "Status : Object Detected";
-          document.getElementById("baby").innerHTML = "Number of objects detected are : "+ objects.length;
+          document.getElementById("number_of_objects").innerHTML = "Baby Found";
  
           fill(r,g,b);
           percent = floor(objects[i].confidence * 100);
